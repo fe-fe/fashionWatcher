@@ -109,6 +109,8 @@ def handleUpdateAll(e: ft.ControlEvent):
 def handleAdd(e: ft.ControlEvent):
     global watchlist
     global addmodal
+    e.page.close(addmodal[0])
+    e.page.update()
     new = add_to_wl(
         addmodal[3].value,
         addmodal[1].value,
@@ -116,7 +118,7 @@ def handleAdd(e: ft.ControlEvent):
     )
     watchlist = read.readAll()
     buildwl(wlgrid, [new])
-    e.page.close(addmodal[0])
+    
     e.page.update()
 
 addmodal[4].on_click = handleAdd

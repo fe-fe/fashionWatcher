@@ -213,14 +213,17 @@ def addForm():
     cancelbt.on_click = handleCancel
 
     add_link.label = "link"
+    add_link.value = ""
 
     add_title.width = width*small_container_size*0.1
     add_title.expand = 1
     add_title.label = "title"
+    add_title.value = ""
 
     add_target.width = width*small_container_size
     add_target.label = "target"
     add_target.prefix_text = "$"
+    add_target.value = ""
 
     bg = fade_container()
     bg.width = 440
