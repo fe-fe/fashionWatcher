@@ -12,6 +12,7 @@ __pycache__/
 
 # Watchlist
 watchlist/*
+watchlist/control.txt
 
 # Distribution / packaging
 .Python
