@@ -138,7 +138,9 @@ wlgrid = ft.GridView(
 def main(page: ft.Page):
 
     page.window.min_height = 600
+    page.window.height = 600
     page.window.min_width = 800
+    page.window.width = 800
 
     page.padding = 20
     page.title = "fashionTracker"
