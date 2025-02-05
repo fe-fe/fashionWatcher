@@ -4,6 +4,8 @@ import update
 import read
 from addnew import add_to_wl
 import delete
+import os
+import pathlib
 
 color1 = "#0f171f"
 color2 = "#0b1b2b"
@@ -18,6 +20,14 @@ black2 = ft.Colors.with_opacity(0.8, "#000000cc")
 black3 = "#1b1b1b"
 black4 = "#202020"
 black5 = "#070B0F"
+
+
+parent = pathlib.Path(__file__).parent.resolve()
+
+if os.listdir(f"{parent}/watchlist") == []:
+    with open("watchlist/control.txt", "w") as ctrlfile:
+        ctrlfile.write("0\n")
+
 
 watchlist = read.readAll()
 
